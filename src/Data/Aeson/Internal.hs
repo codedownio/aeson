@@ -24,5 +24,5 @@ module Data.Aeson.Internal
     ) where
 
 
-import Data.Aeson.Types.Internal
 import Data.Aeson.Types.FromJSON (ifromJSON)
+import Data.Aeson.Types.Internal
