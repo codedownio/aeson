@@ -5,6 +5,7 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE StandaloneDeriving #-}
 {-# LANGUAGE TemplateHaskellQuotes #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 
 -- |
 -- Strong type for JSON keys.
@@ -22,17 +23,16 @@ module Data.Aeson.Key (
     fromShortText,
 ) where
 
-import Prelude (Eq, Ord, (.), Show (..), String, Maybe (..))
+import Prelude ((.), Eq(..), Maybe(..), Ord(..), Show(..), String)
 
 import Control.Applicative ((<$>))
 import Control.DeepSeq (NFData(..))
-import Data.Data (Data)
+import Data.Aeson.Key.Internal
 import Data.Hashable (Hashable(..))
 import Data.Monoid (Monoid(mempty, mappend))
 import Data.Semigroup (Semigroup((<>)))
 import Data.Text (Text)
 import Data.Type.Coercion (Coercion (..))
-import Data.Typeable (Typeable)
 import Text.Read (Read (..))
 
 import qualified Data.String
@@ -40,9 +40,6 @@ import qualified Data.Text as T
 import qualified Data.Text.Short as ST
 import qualified Language.Haskell.TH.Syntax as TH
 import qualified Test.QuickCheck as QC
-
-newtype Key = Key { unKey :: Text }
-  deriving (Typeable, Data)
 
 fromString :: String -> Key
 fromString = Key . T.pack

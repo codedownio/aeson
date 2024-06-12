@@ -64,7 +64,9 @@ library
     Data.Aeson.Encoding
     Data.Aeson.Encoding.Internal
     Data.Aeson.Key
+    Data.Aeson.Key.Internal
     Data.Aeson.KeyMap
+    Data.Aeson.KeyMap.Internal
     Data.Aeson.QQ.Simple
     Data.Aeson.RFC8785
     Data.Aeson.Text
