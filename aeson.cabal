@@ -117,7 +117,7 @@ library
     , character-ps          ^>=0.1
     , data-fix              ^>=0.3.2
     , dlist                 ^>=1.0
-    , hashable              ^>=1.4.6.0
+    , hashable              ^>=1.4.6.0 || ^>=1.5.0.0
     , indexed-traversable   ^>=0.1.2
     , integer-conversion    ^>=0.1
     , integer-logarithms    ^>=1.0.3.1
