@@ -1,0 +1,11 @@
+
+resolver: nightly-2025-03-26
+compiler: ghc-9.12.1
+
+packages:
+- '.'
+- attoparsec-iso8601
+
+flags:
+  aeson:
+    ordered-keymap: true
